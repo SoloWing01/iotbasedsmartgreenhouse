@@ -9,7 +9,7 @@ const char* ssid = "solow";
 const char* password = "@SoLow001";
 
 //Server
-const char* serverName = "https://your-app-name.up.railway.app/data";  
+const char* serverName = "https://end-to-end-iot-smart-agriculture-system-with-rea-production.up.railway.app/data";
 
 // DHT
 #define DHTPIN 23
