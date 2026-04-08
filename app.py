@@ -21,7 +21,11 @@ client = MongoClient(f"mongodb+srv://{escaped_user}:{escaped_pass}@cluster0.s2d5
 db = client["greenhouse"]
 collection = db["sensor_data"]
 
-# -------- API Route --------
+# -------- API Routes --------
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok", "message": "Greenhouse API is running"}), 200
+
 @app.route('/data', methods=['POST'])
 def receive_data():
     data = request.json
